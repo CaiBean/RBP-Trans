@@ -1,19 +1,19 @@
-# PaRPI
+# RBP-Trans
 ## Contacts
-Any more questions, please do not hesitate to contact me: [20234227085@stu.suda.edu.cn](mailto:20234227085@stu.suda.edu.cn)
+Any more questions, please do not hesitate to contact me: [522023300040@smail.nju.edu.cn](mailto:522023300040@smail.nju.edu.cn)
 
 ## NOTICE
 Due to the capacity limiation of Github, we put the relevant files (including the BERT model and all datasets) in [Zenodo](https://doi.org/10.5281/zenodo.14878562). All source code, data and model are open source and can be downloaded from GitHub.
 
 ## Requirements
 PaRPI mainly depends on the Python scientific stack.
-- python=3.8
-- ViennaRNA
+- python=3.9
+- RNA-FM
 - numpy
 - pandas
 - scikit-learn
 - torch
-- dgl
+- esm
 - fair-esm
 - transformers
 
@@ -24,11 +24,11 @@ conda env create -f environment.yml
 ```
 
 ## Quick start
-Before running the code, please create two empty directories required for data processing:
+Before running the code, please create two empty directories required for data and checkpoint:
 
 ```sh
-mkdir -p ./dataset/bat/
-mkdir -p ./dataset/test/
+mkdir  ./data/
+mkdir  ./checkpoint/
 ```
 
 The RBP-Trans model and all to be trained datasets should first be download and put into the corresponding folder. Then, you can train a model with a certain dataset using the following command:
@@ -45,8 +45,8 @@ python train_base.py --validate --eclip_path data/encode_eclip.h5 --config .conf
 python train_bc.py --validate --eclip_path data/encode_eclip_bc.h5  --config .configs/bc_config.yaml
 ```
 
-To utilize a trained model for predicting new RBP, you should first acquire the corresponding sample datas and place them in the designated folder. Subsequently, execute the following code:
+To utilize a trained model for denoisy peak calling pipeline, you should first acquire the corresponding sample datas and place them in the designated folder. Subsequently, execute code like this:
 
 ```sh
-python main.py --prediction_aware --cell H9 --data_name LIN28A_H9
+python train_rabk.py --train --parquet_path data/rank_HepG2_RBFOX2_rep1.parquet  --config .configs/rank_config.yaml
 ```
