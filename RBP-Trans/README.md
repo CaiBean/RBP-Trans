@@ -1,6 +1,6 @@
 # RBP-Trans
 ![](https://rbp-trans.oss-cn-hangzhou.aliyuncs.com/36ae410e-bfed-4b39-951f-eed71d095093.png?Expires=1780286399&OSSAccessKeyId=TMP.3KvN3xVzVr1ZigtZXZxepPSJvSkJf1QbzDGDGMACv2xahBRREMoim2K5pkHv6guh4rmGiWf7T7meuPNimo5ejxBTX9vKew&Signature=14hAV0GvmQFXW0L1Yu%2F8vEbYreA%3D)
-
+**RBP-Trans is the first deep learning model in the field of single-nucleotide binding strength prediction that introduces pretrained large language model-based feature extraction (RNA-FM for RNA feature extraction and ESM2 for protein feature extraction) and multimodal fusion. It enables efficient qualitative and quantitative prediction tasks across different RBPs. Moreover, the model can be extended downstream to optimize eCLIP peak calling algorithms and to explore RBP-RBP interactions**
 
 ## Requirements
 RBP-Trans mainly depends on the Python scientific stack.
