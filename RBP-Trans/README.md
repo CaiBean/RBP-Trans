@@ -1,9 +1,6 @@
 # RBP-Trans
-## Contacts
-Any more questions, please do not hesitate to contact me: [522023300040@smail.nju.edu.cn](mailto:522023300040@smail.nju.edu.cn)
 
-## NOTICE
-Due to the capacity limiation of Github, we put the relevant files (including the BERT model and all datasets) in [Zenodo](https://doi.org/10.5281/zenodo.14878562). All source code, data and model are open source and can be downloaded from GitHub.
+
 
 ## Requirements
 PaRPI mainly depends on the Python scientific stack.
@@ -50,3 +47,8 @@ To utilize a trained model for denoisy peak calling pipeline, you should first a
 ```sh
 python train_rabk.py --train --parquet_path data/rank_HepG2_RBFOX2_rep1.parquet  --config .configs/rank_config.yaml
 ```
+## NOTICE
+Due to the capacity limiation of Github, we put the relevant files (including the BERT model and all datasets) in [Zenodo](https://doi.org/10.5281/zenodo.14878562). All source code, data and model are open source and can be downloaded from GitHub.
+
+## Contacts
+Any more questions, please do not hesitate to contact me: [522023300040@smail.nju.edu.cn](mailto:522023300040@smail.nju.edu.cn)
