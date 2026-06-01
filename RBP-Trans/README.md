@@ -31,16 +31,18 @@ mkdir -p ./dataset/bat/
 mkdir -p ./dataset/test/
 ```
 
-The BERT model and all to be trained datasets should first be download and put into the corresponding folder. Then, you can train a model with a certain cell line dataset using the following command:
+The RBP-Trans model and all to be trained datasets should first be download and put into the corresponding folder. Then, you can train a model with a certain dataset using the following command:
 
 ```sh
-python main.py --train --cell H9  --model_save_path ./results/model
+python train_base.py --train --eclip_path data/encode_eclip.h5  --config .configs/base_config.yaml
+python train_bc.py --train --eclip_path data/encode_eclip_bc.h5  --config .configs/bc_config.yaml
 ```
 
 After training, you can validate the model by using :
 
 ```sh
-python main.py --validate --cell H9  
+python train_base.py --validate --eclip_path data/encode_eclip.h5 --config .configs/base_config.yaml
+python train_bc.py --validate --eclip_path data/encode_eclip_bc.h5  --config .configs/bc_config.yaml
 ```
 
 To utilize a trained model for predicting new RBP, you should first acquire the corresponding sample datas and place them in the designated folder. Subsequently, execute the following code:
