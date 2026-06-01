@@ -3,7 +3,7 @@
 
 
 ## Requirements
-PaRPI mainly depends on the Python scientific stack.
+RBP-Trans mainly depends on the Python scientific stack.
 - python=3.9
 - RNA-FM
 - numpy
